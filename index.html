@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Menu System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Menu Wrapper -->
+        <div id="menu" class="menu hidden">
+            <!-- Header/Banner -->
+            <div class="menu-header">
+                <div class="banner" id="banner"></div>
+            </div>
+
+            <!-- Main Menu Tab -->
+            <div class="main-menu-bar">
+                <div id="topTabs" class="top-tabs"></div>
+            </div>
+
+            <!-- Categories/Items Section -->
+            <div class="menu-content">
+                <div class="tabs-section" id="tabsSection"></div>
+                <div class="items-section" id="itemsSection"></div>
+                <div class="scrollbar" id="scrollbar"></div>
+            </div>
+
+            <!-- Footer -->
+            <div class="menu-footer">
+                <span class="footer-text" id="footerLeft">.gg/JAjYK5Aa</span>
+                <span class="footer-text" id="footerRight">1/9</span>
+            </div>
+        </div>
+
+        <!-- Loading Bar -->
+        <div id="loadingOverlay" class="loading-overlay">
+            <div class="loading-spinner">
+                <svg class="spinner-circle" viewBox="0 0 50 50">
+                    <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="2"></circle>
+                </svg>
+                <div class="loading-text">Injecting</div>
+                <div class="loading-percent">0%</div>
+            </div>
+        </div>
+
+        <!-- Key Selector Modal -->
+        <div id="keySelectorModal" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">KEYBIND</div>
+                <div class="modal-bar"></div>
+                <div class="modal-body">
+                    <span id="bindingInfo">Press a key</span>
+                    <div class="key-box">
+                        <span id="selectedKeyDisplay">...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Keybinds Display -->
+        <div id="keybindsDisplay" class="keybinds-display hidden">
+            <div class="keybinds-header">keybind</div>
+            <div class="keybinds-bar"></div>
+            <div class="keybinds-list" id="keybindsList"></div>
+        </div>
+    </div>
+
+    <!-- Settings Toggle -->
+    <button id="toggleBtn" class="toggle-btn" title="Toggle Menu (Press 1)">☰ Menu</button>
+
+    <script src="menu.js"></script>
+</body>
+</html>
